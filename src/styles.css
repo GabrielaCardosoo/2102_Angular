@@ -1,55 +1,112 @@
-body, html {
-  height: 100%; 
-  width: 100%;  
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial, sans-serif;
-  text-align: center;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f0f0;
+  padding: 20px;
+}
+
+.title {
+  background: linear-gradient(135deg, #5c2d91, #9b4dca);
+  -webkit-background-clip: text;
+  color: transparent !important;
+  font-size: 36px;
+  font-weight: 700;
   text-align: center;
-  width: 50%;  
-  max-width: 600px;
+  letter-spacing: 1px;
+  margin: 0;
 }
 
-h1 {
-  color: #6a1b9a;
-  font-size: 32px;
-  margin-bottom: 10px; /* Deixei uma margem menor para não exagerar no espaço */
-  width: 100%;
-  margin: 0 auto;
-}
-
-form {
+.form-container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 20px; /* Aqui está a margem que adiciona espaço entre o título e os inputs */
 }
 
-input {
+label {
+  color: #5c2d91;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input, select {
   padding: 10px;
-  border: 3px solid #a81fc6;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 100%; 
-  max-width: 100%; 
+  border: 2px solid #5c2d91;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #9b4dca;
+  outline: none;
 }
 
 button {
-  padding: 15px;
-  background-color: #873ad4;
-  color: white;
+  padding: 13px;
+  background: linear-gradient(135deg, #5c2d91, #9b4dca);
+  color: #fff;
   border: none;
   border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
   cursor: pointer;
-  font-size: 25px;
-  width: 100%; 
+  transition: background 0.3s;
 }
 
 button:hover {
-  background-color: #971ae0;
+  background: linear-gradient(135deg, #9b4dca, #5c2d91);
+}
+
+h3 {
+  color: #4caf50;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+select {
+  color: #5c2d91;
+  font-weight: 400;
+  border: 2px solid #5c2d91;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+option {
+  color: #5c2d91;
+  font-weight: 400;
+  padding: 10px;
+}
+
+option:nth-child(2), option:nth-child(3), option:nth-child(4), option:nth-child(5), option:nth-child(6) {
+  border-top: 1px solid #5c2d91;
+  margin-top: 5px;
+}
+
+option:last-child {
+  border-top: none;
+}
+
+input[type="number"], select {
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
 }
